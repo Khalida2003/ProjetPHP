@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: black;
+    height: 100px;
+    width: 100%;
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+ul li{
+ display: inline-block;
+text-transform:uppercase;
+background: green;
+padding: 1em;
+margin: 1.5em 2px 8px 0;
+ 
+}
