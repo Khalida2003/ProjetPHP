@@ -40,13 +40,7 @@
                         <li><a href="#"><img src="imgs/PANIER.png" alt="erreur" class="panierimg"></a></li>
                     </ul>
                 </div>
-    <div class="slides">
-                <div class="slideright">
-                <svg viewBox="0 0 26 19" role="img" width="70px" style="transform: rotate3d(0, 0, 1, -90deg);"><title>Chevron</title><path d="M13 12.49l-8-8M21 4.49l-8.35 8.35" style="stroke: white;"></path></svg>
-                </div>
-                <div class="slideleft">
-                <svg viewBox="0 0 26 19" role="img" width="70px" style="transform: rotate3d(0, 0, 1, 90deg);"><title>Chevron</title><path d="M13 12.49l-8-8M21 4.49l-8.35 8.35" style="stroke: white;"></path></svg>    </div>
-          </div>
+   
     </header>
     <div class="corps">
         

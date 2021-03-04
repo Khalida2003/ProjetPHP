@@ -17,7 +17,7 @@ header{
     height : 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: linear-gradient(0deg, rgba(63,33,133,0) 0%, rgba(0,0,0,0.46262254901960786) 0%);
 }
 #imgscroll{
@@ -31,6 +31,7 @@ header{
     
 }
 nav .topnav {
+    
       margin: 0 auto;
       display: block;
       padding: 120px 0 0 0;  
@@ -102,7 +103,7 @@ nav .topnav {
       #logo{
           color: black;
         position: absolute;
-       left: 4%;
+       left: 45%;
        font-size: 35px;
      letter-spacing: 6px;
      background-color: white;
@@ -178,38 +179,6 @@ nav .topnav {
         
      }
 
-     .slideright{
-         position:absolute;
-         right : 0;
-         top : 50%;
-                  cursor: pointer;
-
-     }
-     .slideleft{
-         cursor: pointer;
-        position:absolute;
-        left : 0;
-        top : 50%;
-        
-    }
-    .slideleft svg path{
-        
-        transition :  all 150ms ease 0s;
-       
-       }
-    .slideleft:hover > svg path{
-        opacity : .5;
-
-    }
-    .slideright svg path{
-        
-        transition :  all 150ms ease 0s;
-       
-       }
-    .slideright:hover > svg path{
-        opacity : .5;
-
-    }
   
     .corps{
         width: 100%;
