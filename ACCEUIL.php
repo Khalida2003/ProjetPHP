@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 		
-    <link rel="stylesheet" href="acceuil.css">
-    <title>acceuil</title>
+    <link rel="stylesheet" href="css/acceuil.css">
+    <title>Home Page</title>
 </head>
 <body>
     <header>
@@ -19,17 +19,13 @@
 <li ><a class="linkcolor" href="">Materiels</a></li>
 
 <li id="logo"><a href="">L.Y.K</a></li>
-<li>  <div id="rolling_bar">
-      <input type="text" id="txt">
-      <a href="#" id="btn">
-        <img src="search_image_1.png" alt="img">
-      </a>
+<li>  <div id="rolling_bar"><input type="text" id="txt"> <a href="#" id="btn"> <img src="imgs/search.png" alt="img"> </a>
 
     </div>
 </li>
 
 <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn"><img src="login.PNG" alt="LOGIN"></a>
+    <a href="#" class="dropbtn"><img src="imgs/login.png" alt="LOGIN"></a>
     <div class="dropdown-content">
       <a href="#">ADMIN</a>
       <a href="#">CLIENT</a>
@@ -37,7 +33,7 @@
   </li>
   <li>
 <div class="pan">
-  <span><a href="#"><img  class="panier" src="panier.PNG" alt="panier"></a></span>
+  <span><a href="#"><img  class="panier" src="imgs/panier.png" alt="panier"></a></span>
   <div class="pan-content">
   <p>remplisser votre panier!! <br><br><br>
 

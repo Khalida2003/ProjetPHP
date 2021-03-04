@@ -1,0 +1,223 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+.mynav{
+    width: 100%;
+    height : 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(63,33,133,0) 0%, rgba(0,0,0,0.46262254901960786) 0%);
+}
+#imgscroll{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/bgimage2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+    
+}
+nav .topnav {
+      margin: 0 auto;
+      display: block;
+      padding: 120px 0 0 0;  
+      text-align: center;
+      font-size: 1em;
+      
+}
+.topnav  ul li {
+        margin: 0 auto;
+        display: inline-block;
+        padding: 0 20px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+      }
+  
+      .topnav  li a {
+        color: white;
+    }
+  
+    .topnav  li a:hover {
+          color: rgba(216, 121, 43, 0.836);
+         
+      }
+  
+      .topnav li:hover {
+        cursor: pointer;
+        
+        
+      }
+  
+      .topnav  ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+        display: none;
+        background : linear-gradient(0deg, rgba(63,33,133,0) 0%, rgba(0,0,0,0.46262254901960786) 0%);
+    }
+  
+    .topnav ul li:hover > ul,
+    .topnav ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        min-width: 250px;
+        text-align: left;
+        padding-top: 20px;
+        box-shadow: 0px 3px 5px -1px #ccc;
+        
+      }
+  
+      .topnav  ul li ul li {
+        clear: both;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        border-style: none;
+      }
+  
+      .topnav  ul li ul li a:hover {
+        padding-left: 10px;
+        border-bottom : 1px solid black;
+        border-width: medium;
+        transition: all 0.3s ease;
+      }
+
+      #logo{
+          color: black;
+        position: absolute;
+       left: 4%;
+       font-size: 35px;
+     letter-spacing: 6px;
+     background-color: white;
+     padding: .5%;
+     border-radius: 20%;
+     
+     }
+     #logo:active,
+     #logo:focus,
+     #logo:hover{
+         background-color: rgba(216, 121, 43, 0.836);
+         transform: rotate(2turn);
+         transition : 2s
+     }
+     .rightcorner{
+         position: relative;
+         width : 50%;
+         height : 100px;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         background: linear-gradient(0deg, rgba(63,33,133,0) 0%, rgba(0,0,0,0.46262254901960786) 0%);
+
+     }
+     .rightcorner ul li a img{
+         width : 35px;
+         height : 35px;
+         margin-right : 20px;
+        
+         
+     }
+     .rightcorner ul li {
+        display : inline-block;
+        margin : 0 10px;
+        
+
+     }
+     .searchimg,.panierimg{
+         background: rgb(88, 85, 85);
+         border-radius: 50%;
+         
+     }
+     #searchinput{ 
+         opacity : 0;
+         width:0;
+         height : 37px;
+         outline : none;
+         border : none;
+         padding : 0 40px 0 20px;
+         line-height: 40px;
+         border-bottom: rgb(75, 75, 75) solid 3px;
+         background: none;
+        border-radius: 30px;
+        position:absolute;
+        right:14%;
+        top:5%;
+        color: white;
+         z-index: 1;
+         transition : 1s ease;
+
+         
+     }
+     .searchimg:hover{
+       
+         transform : rotate(1turn);
+         transition: 0.7s;
+     }
+        #searchinput:hover,
+        #searchinput:focus{
+            opacity: 1;
+            width : 200px;
+        transition : 0.8s ease;
+        
+     }
+
+     .slideright{
+         position:absolute;
+         right : 0;
+         top : 50%;
+                  cursor: pointer;
+
+     }
+     .slideleft{
+         cursor: pointer;
+        position:absolute;
+        left : 0;
+        top : 50%;
+        
+    }
+    .slideleft svg path{
+        
+        transition :  all 150ms ease 0s;
+       
+       }
+    .slideleft:hover > svg path{
+        opacity : .5;
+
+    }
+    .slideright svg path{
+        
+        transition :  all 150ms ease 0s;
+       
+       }
+    .slideright:hover > svg path{
+        opacity : .5;
+
+    }
+  
+    .corps{
+        width: 100%;
+        height: 200vh;
+        background :rgba(216, 121, 43, 0.836)
+    }
+     
+     
+  
+  
+  
