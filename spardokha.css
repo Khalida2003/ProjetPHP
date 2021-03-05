@@ -90,12 +90,13 @@ section::after
 {
     max-width: 100%;
     margin: 0 0 20px;
-    transition: 0,5s ease-in-out;
+    transition: 1s all;
 }
 
 .container .card:hover .imgBx img
 {
     transform: translate(-20px,-40px)rotate(-25deg) scale(1.4);
+    transition: 1s all;
 }
 
 .container .card .imgBx h2
@@ -123,6 +124,7 @@ section::after
     opacity: 1;
     visibility: visible;
     transform: translateY(-50px);
+    
 }
 
 

@@ -22,7 +22,7 @@
                         <span>10</span>
                     </div>
                     <div class="color">
-                        <h3>Coler :</h3>
+                        <h3>Color:</h3>
                         <span></span>
                         <span></span>
                         <span></span>
