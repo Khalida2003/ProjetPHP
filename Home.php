@@ -8,11 +8,11 @@
     <title>Home Page</title>
 </head>
 <body>
-    <header>
+    <header >
        
         <div id="imgscroll">
-          
-        <div class="mynav">
+            <div class="navfixed">
+        <div class="mynav" >
             <nav class="topnav">
         <ul>
     <li><a href="#">Accueil</a></li>
@@ -40,10 +40,12 @@
                         <li><a href="#"><img src="imgs/PANIER.png" alt="erreur" class="panierimg"></a></li>
                     </ul>
                 </div>
-   
+                </div>
     </header>
     <div class="corps">
         
     </div>
+
+
 </body>
 </html>
