@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
 *{
     padding : 0;
     margin : 0;
     box-sizing: border-box;
-    font-family:monospace;
+    font-family: 'Noto Sans SC', sans-serif;
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
 }
+
 .outer-box{
     position: absolute;
     top: 80PX;
@@ -24,46 +26,29 @@
     height: 5vh;
     animation: animate 2s ease-in-out forwards;
 }
-@keyframes animate{
-    0%{
-        opacity: 0;
-        transform: scale(0) translateY(1000px);
-    }
-    50%{
-        opacity: 1;
-        background: url(https://cutewallpaper.org/21/fitness-phone-wallpaper/Fitness-wallpaper-SF-Wallpaper.jpg);
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1) translateY(0px);
-        background: url(https://cutewallpaper.org/21/fitness-phone-wallpaper/Fitness-wallpaper-SF-Wallpaper.jpg);
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-}
+
 header{
     width: 100%;
     height: 100vh;
 }
-
+html{
+    overflow-x : hidden;
+}
 .mynav{
     width: 100%;
-    height : 80px;
+    height : 50px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: linear-gradient(to bottom right,rgb(53, 52, 52),rgb(158, 158, 158));
+    background: linear-gradient(to bottom right,rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.534));
 }
 #imgscroll{
     width: 100%;
     height: 100vh;
-    background-image: url(../imgs/1.jpg);
+    background-image: url(../imgs/orangeheader.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size:cover;
     display: flex;  
 }
 nav .topnav {
@@ -87,35 +72,35 @@ nav .topnav {
     }
     .topnav  li a:hover {color: rgba(216, 121, 43, 0.836);}
     .topnav li:hover {cursor: pointer; }
-    #logo{
+  /*  #logo{
      color: white;
      position: absolute;
      left: 45%;
      font-size: 35px;
      letter-spacing: 6px;
      font-family: 'pacifico', cursive;
-     background-color: rgba(255, 255, 255, 0.048);
+     background-color: rgba(255, 255, 255, 0);
      padding: .5%;
      border-radius: 50%;
      }
      #logo:active,
      #logo:focus,
      #logo:hover{
-         background-color: rgba(216, 121, 43, 0.836);
+         background-color: rgba(192, 181, 171, 0.836);
          transform: rotate(2turn);
          transition : 2s
-     }
+     }*/
      .rightcorner{
          position: relative;
          width : 50%;
-         height : 80px;
+         height : 50px;
          display: flex;
          align-items: center;
          justify-content: flex-end;
-         background: linear-gradient(to bottom left,rgb(53, 52, 52),rgb(158, 158, 158));
-     }
+         background: linear-gradient(to bottom right,rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.534));
+        }
      .rightcorner ul li a img{
-         margin-top: 10px;
+         margin-top: 0;
          width : 29px;
          height : 29px;
          margin-right : 20px;   
@@ -575,7 +560,7 @@ nav .topnav {
 }
 .footer-col ul li a:hover{
 	color: rgba(214, 117, 37, 0.993);
-	padding-left: 8px;
+	transform: translateX(6PX);
 }
 .footer-col .social-links a{
 	display: inline-block;
