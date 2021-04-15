@@ -13,11 +13,8 @@
 html{
     overflow-x : hidden;
 }
-.flex{
-    display : flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 header{
     width: 100%;
     height: 100vh;
@@ -111,6 +108,9 @@ header{
     transition : .5s ease;
 
 }
+.active{
+    color : white;
+}
 
 
 
@@ -128,7 +128,7 @@ header{
         transition: .3s;
         color : #f6f6f6;
         border-radius: 4px;
-        box-shadow : 0 10px 50px black;
+        box-shadow : 0 0px 20px rgba(0, 0, 0, 0.308);
 
     }
     .collection_box:hover{
