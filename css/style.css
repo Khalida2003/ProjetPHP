@@ -78,11 +78,12 @@ header{
     margin-left : 10em;
     padding-top : 5em;
     color : rgb(71 85 94);
+    position : relative;
 }
 .header h1{
     font-size : 3.6em;
 }
-.header button{
+.header a{
     padding : 1em 4em;
     outline : none;
     border : none;
@@ -91,23 +92,21 @@ header{
     background : rgb(216, 121, 43);
     font-weight : 600;
     transition : .5s ease;
-    margin : 3em auto auto 10em;
+    position : absolute;
+    transform : translate(80%,120%);
     
 }
 .header a{
     color :   rgb(26, 26, 26);
 }
 .header a:hover,
-.header a:focus,
-.header a:active{
+.header a:active
+{
     color : white;
-    transition : .5s ease;
-}
-.header button:hover{
     background : rgb(26, 26, 26);
     transition : .5s ease;
-
 }
+
 .active{
     color : white;
 }
