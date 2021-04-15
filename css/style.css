@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     padding : 0;
     margin : 0;
@@ -8,204 +10,112 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
-
-.outer-box{
-    position: absolute;
-    top: 80PX;
-    left: 0;
-    width: 105%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-}
-.outer-box .inner-box{
-    position: relative;
-    display: block;
-    width: 5vw;
-    height: 5vh;
-    animation: animate 2s ease-in-out forwards;
-}
-
-header{
-    width: 100%;
-    height: 100vh;
-}
 html{
     overflow-x : hidden;
 }
-.mynav{
-    width: 100%;
-    height : 50px;
-    display: flex;
+.flex{
+    display : flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    background: linear-gradient(to bottom right,rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.534));
 }
-#imgscroll{
+header{
     width: 100%;
     height: 100vh;
-    background-image: url(../imgs/orangeheader.png);
+    background : #f6f6f6;
+    overflow : hidden;
+   
+
+}
+.firstnav{
+    width: 100%;
+    height : 10em;
+    background : rgb(71 85 94);
+    position: relative;
+    
+}
+.firstnav img{
+    position : absolute;
+    width : 10em;
+    height : 10em;
+    left : 50%;
+    right : 50%;
+    transform : translateX(-50%);
+;
+}
+.secondnav{
+    width : 100%;
+    height : 4.5em;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+ 
+   
+}
+.secondnav ul li{
+    display : inline-block;
+    margin : auto 2em;
+  
+
+}
+.secondnav ul li a{
+    color :rgb(71 85 94);
+    font-weight : 600;
+    transition : .2s ease;
+}
+.secondnav ul li a:hover{
+    color : rgb(26, 26, 26);
+    transition : .2s ease;
+}
+
+.header{
+    width : 100%;
+    height : 600px;
+    background-image: url(../imgs/headerimg.jpg);
+    background-position: right;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    display: flex;  
 }
-nav .topnav {
-      margin: 0 auto;
-      display: block;
-      padding: 120px 0 0 0;  
-      text-align: center;
-      font-size: 1em;    
+.lefthalf_header{
+    height :600px;
+    width : 50%;
+    margin-left : 10em;
+    padding-top : 5em;
+    color : rgb(71 85 94);
 }
-.topnav  ul li {
-        margin: 0 auto;
-        display: inline-block;
-        padding: 0 20px;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-      }
-      .topnav  li a {
-        color: white;
-        font-size: 17PX;
-    }
-    .topnav  li a:hover {color: rgba(216, 121, 43, 0.836);}
-    .topnav li:hover {cursor: pointer; }
-  /*  #logo{
-     color: white;
-     position: absolute;
-     left: 45%;
-     font-size: 35px;
-     letter-spacing: 6px;
-     font-family: 'pacifico', cursive;
-     background-color: rgba(255, 255, 255, 0);
-     padding: .5%;
-     border-radius: 50%;
-     }
-     #logo:active,
-     #logo:focus,
-     #logo:hover{
-         background-color: rgba(192, 181, 171, 0.836);
-         transform: rotate(2turn);
-         transition : 2s
-     }*/
-     .rightcorner{
-         position: relative;
-         width : 50%;
-         height : 50px;
-         display: flex;
-         align-items: center;
-         justify-content: flex-end;
-         background: linear-gradient(to bottom right,rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.534));
-        }
-     .rightcorner ul li a img{
-         margin-top: 0;
-         width : 29px;
-         height : 29px;
-         margin-right : 20px;   
-     }
-     .rightcorner ul li {
-        display : inline-block;
-        margin : 0 20px;
-     }
-     .dropdown {
-         position: absolute;
-         top: 11%;
-        width : 30px;
-         right: 36.5%;
-         padding: 10PX;
-      }
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-       .linkcolor:hover {
-        color: #555;
-      }
-      .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        display: block;
-      }
-      .dropdown-content a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      .dropdown:hover .dropdown-content {
-        display: block;
-        position: absolute;
-        top: 60px;
-        right: 0%;
-     }
-     .pan {
-        position: absolute;
-        margin:  0;
-        padding: 0%;
-        right: 15%;
-        display: inline-block;
-        top: 20px;
-      }
-      .pan-content {
-        display: none;
-        position: absolute;
-        right: 5px;
-        top: 60px;
-        background-color: #f9f9f9;
-        min-width: 400px;
-        text-align: center;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-      }
-      .pan:hover .pan-content {
-        display: block;
-      }
-     .panbtn {
-        display: inline-block;
-        color: white;
-        text-align: left;
-      }
-     #searchinput{ 
-         opacity : 0;
-         width:0;
-         height : 37px;
-         outline : none;
-         border : none;
-         padding : 0 40px 0 20px;
-         line-height: 40px;
-         border-bottom: rgb(75, 75, 75) solid 3px;
-         background: none;
-        border-radius: 30px;
-        position:absolute;
-        right: 20.25%;
-        top:3.75%;
-        color: white;
-         z-index: 1;
-         transition : 1s ease;  
-     }
-     .searchimg{position: absolute; right: 50%; top: 24.5%;}
-     .searchimg:hover{
-         transform : rotate(1turn);
-         transition: 0.7s;
-     }
-        #searchinput:hover,
-        #searchinput:focus{
-            opacity: 1;
-            width : 200px;
-        transition : 0.8s ease;  
-     }
-     .usimg{position: absolute; right:4%; top: 25%; }
+.header h1{
+    font-size : 3.6em;
+}
+.header button{
+    padding : 1em 4em;
+    outline : none;
+    border : none;
+    border-radius : 50px;
+    cursor : pointer;
+    background : rgb(216, 121, 43);
+    font-weight : 600;
+    transition : .5s ease;
+    margin : 3em auto auto 10em;
+    
+}
+.header a{
+    color :   rgb(26, 26, 26);
+}
+.header a:hover,
+.header a:focus,
+.header a:active{
+    color : white;
+    transition : .5s ease;
+}
+.header button:hover{
+    background : rgb(26, 26, 26);
+    transition : .5s ease;
+
+}
+
+
 
       /*collection*/
-      table{
-          width: 100%;
-      }
+
       .collection_container{
         row-gap: 20rem;
     }
@@ -214,9 +124,12 @@ nav .topnav {
         justify-content: space-between;
         align-items: center;
         align-content: center;
-        padding: 0 ;
-        background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blurred-gray-background-brandon-bourdages.jpg);
+        background :  rgb(71 85 94);
         transition: .3s;
+        color : #f6f6f6;
+        border-radius: 4px;
+        box-shadow : 0 10px 50px black;
+
     }
     .collection_box:hover{
         transform:translateY(-.5rem) ;
@@ -235,11 +148,10 @@ nav .topnav {
     }
     .collection_subtitle{
         font-size: 35px;
-        color: #474747;
     }
     .collection_new{
         font-size: 1.25rem;
-        color: rgba(216, 121, 43, 0.836);
+        color: rgb(216, 121, 43);
         padding-left: 80PX;
     }
 
@@ -253,6 +165,7 @@ nav .topnav {
         font-size:60PX;
         padding: 15PX;
         margin: 15PX;
+        color : rgb(71 85 94);
     }
   section a h5{
       font-size: 20px;
@@ -280,7 +193,7 @@ nav .topnav {
     align-items: center;
     flex-direction: column;
     background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blurred-gray-background-brandon-bourdages.jpg);
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.103);
 }
 .container .card .imgBx
 {
@@ -290,25 +203,29 @@ nav .topnav {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    transition: 0,5s ease-in-out;
+    transition: 1s ease;
 
 }
 
 .container .card:hover .imgBx
 {
     transform: translateY(-100px);
+    transition: 1s ease;
 }
 
 .container .card .imgBx img
 {
     max-width: 100%;
     margin: 0 0 20px;
-    transition: 0,5s ease-in-out;
+    transition: 1s ease;
+
 }
 
 .container .card:hover .imgBx img
 {
     transform: translate(-20px,-40px)rotate(-25deg) scale(1.4);
+    transition: 1s ease;
+
 }
 
 .container .card .imgBx h2
@@ -415,6 +332,12 @@ nav .topnav {
    color: #111;
    text-decoration: none;
    text-transform: uppercase;
+   transition : .5s ease;
+}
+.container .card .content a:hover{
+    background: rgba(167, 94, 35, 0.63);
+    transition : .5s ease;
+
 }
 /*--=====offer=====--*/
 .offer-bg{
@@ -439,12 +362,20 @@ nav .topnav {
     font-size: 3REM;
 }
 .button{
-    border: solid rgba(216, 121, 43, 0.993);
+    border: none;
+    outline : none;
     background: rgb(216, 121, 43);
     color: white;
     padding: 35PX;
     font-size: x-large;
     letter-spacing: 6PX;
+    transition: .5s ease;
+
+}
+.button:hover{
+    background: rgb(168, 94, 33);
+
+    transition: .5s ease;
 }
 /*======= NEW ARRIVALS ========*/
 .new_container{
@@ -467,7 +398,7 @@ nav .topnav {
     align-content: center;
     align-items: center;
     background: rgba(216, 121, 43, 0.295);
-    transition: 3s;
+    transition: 2s ease;
 }
 .new_container  ul li {
     margin: 0 auto;
@@ -505,9 +436,9 @@ nav .topnav {
 }
 .sponsors_logo img:hover{
     filter: none;
+    cursor: pointer;
 }
 /*===========footer===========*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -517,9 +448,7 @@ nav .topnav {
 	flex-wrap: wrap;
 }
 .footer{
-	background:url(../imgs/blurred-gray-background-left.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background : rgb(71 85 94);
     padding: 70px 0;
 }
 .footer-col{

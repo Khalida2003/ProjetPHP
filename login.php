@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styleLogin.css">
     </head>
     <body>
-    <form class="box" action="index.html" method="post">
+    <form class="box" action="home.html" method="POST">
      <h1>Login</h1>
      <input type="text" name="" placeholder="Username">
      <input type="password" name="" placeholder="Password">
