@@ -17,16 +17,17 @@ html{
 
 header{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background : #f6f6f6;
     overflow : hidden;
    
 
 }
+        /* ____________________TOP NAV _____________________*/
 .firstnav{
     width: 100%;
     height : 10em;
-    background : rgb(71 85 94);
+    background : rgb(71,85, 94);
     position: relative;
     
 }
@@ -44,14 +45,115 @@ header{
     50%{transform : translateX(-200%);}
     100%{transform : translateX(200%);}
 }
-.secondnav{
+
+
+/*  SEARCH -- LOGIN -- PANIER */
+
+.searchbar{
     width : 100%;
-    height : 4.5em;
+    height : 80px;
+    display: flex;
+    background: #fcfcfc;;
+}
+
+.login{
+    width : 45%;
+    height : 50px;
+    display : flex;
+    align-items: center;
+    justify-content: flex-end;
+    height :auto;
+    
+}
+.login ul li{
+    display: inline;
+    display : inline-block;
+    margin : auto 1.2em;
+}
+.login a{
+    margin-left : 7px;
+    color :rgb(71,85, 94);
+    font-weight : 600;
+    transition : .5s ease;
+    padding : .5em;
+    border-radius : 4px;
+
+}
+.login a:hover{
+    background :rgb(230, 130, 48);
+    color :white;
+    transition : .5s ease;
+}
+.login  img{
+    width : 20px;
+    height : 20px;
+}
+
+.form{
+    width : 55%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position : relative;
+    
+}
+#search_input{
+    padding : .5em 3em;
+    width : 400px;
+    border-radius : 4px;
+    outline : none;
+   box-shadow : 1px 1px 3px rgba(138, 138, 138, 0.384);
+    border : 1px solid rgba(180, 180, 180, 0.486);
+    position : relative;
+
+}
+.icons{
+    width : 20px;
+    height : auto;
+    position : absolute;
+    bottom : 50%;
+    top : 50%;
+    transform : translateY(-50%);
+    z-index: 1;
+
+}
+.searchimg{
+    
+  left : 22%;
+}
+.search_cancel{
+    right : 27%;
+    cursor : pointer;
+}
+
+.hide{
+    display: none;
+}
+.searchbtn{
+    padding : 1em 4em;
+    outline : none;
+    border : none;
+    border-radius : 50px;
+    cursor : pointer;
+    background : rgb(230, 130, 48);
+    color : white;
+    font-weight : 600;
+    transition : .5s ease;
+}
+.searchbtn:hover{
+    background : rgb(71,85, 94);
+    transition : .5s ease;
+}
+
+/*         _________NAVBAR _____________________ */
+
+.secondnav{
+    margin-top : 2em;
+
     display : flex;
     align-items: center;
     justify-content: center;
- 
-   
+    
 }
 .secondnav ul li{
     display : inline-block;
@@ -60,7 +162,7 @@ header{
 
 }
 .secondnav ul li a{
-    color :rgb(71 85 94);
+    color :rgb(71,85, 94);
     font-weight : 600;
     transition : .2s ease;
     position : relative;
@@ -87,13 +189,14 @@ header{
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
+    padding-top : 10em;
 }
 .lefthalf_header{
     height :600px;
     width : 50%;
     margin-left : 10em;
     padding-top : 5em;
-    color : rgb(71 85 94);
+    color : rgb(71,85, 94);
     position : relative;
 }
 .header h1{
@@ -109,18 +212,15 @@ header{
     font-weight : 600;
     transition : .5s ease;
     position : absolute;
+    color : white;
     transform : translate(80%,120%);
     
 }
-.header a{
-    color :   rgb(26, 26, 26);
-    
-}
+
 .header a:hover,
 .header a:active
 {
-    color : white;
-    background : rgb(71 85 94);
+    background : rgb(71,85, 94);
     transition : .5s ease;
 }
 
@@ -137,7 +237,7 @@ header{
         justify-content: space-between;
         align-items: center;
         align-content: center;
-        background :  rgb(71 85 94);
+        background :  rgb(71,85, 94);
         transition: .3s;
         color : #f6f6f6;
         border-radius: 4px;
@@ -178,7 +278,7 @@ header{
         font-size:60PX;
         padding: 15PX;
         margin: 15PX;
-        color : rgb(71 85 94);
+        color : rgb(71,85, 94);
     }
   section a h5{
       font-size: 20px;
@@ -461,7 +561,7 @@ header{
 	flex-wrap: wrap;
 }
 .footer{
-    background : rgb(71 85 94);
+    background : rgb(71,85, 94);
     padding: 70px 0;
 }
 .footer-col{
