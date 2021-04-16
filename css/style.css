@@ -37,7 +37,12 @@ header{
     left : 50%;
     right : 50%;
     transform : translateX(-50%);
-;
+    animation :  infinite 10s logo linear;
+}
+@keyframes logo{
+    0%{ transform : translateX(200%)}
+    50%{transform : translateX(-200%);}
+    100%{transform : translateX(200%);}
 }
 .secondnav{
     width : 100%;
@@ -58,11 +63,22 @@ header{
     color :rgb(71 85 94);
     font-weight : 600;
     transition : .2s ease;
+    position : relative;
+    padding-bottom : 10px;
 }
 .secondnav ul li a:hover{
     color : rgb(26, 26, 26);
     transition : .2s ease;
 }
+.secondnav ul li a.active:after{
+    content : " ";
+    position : absolute;
+    border : 2px solid rgb(230, 130, 48);
+    width : 40px;
+    bottom : 0;
+    left : 2px;
+}
+
 
 .header{
     width : 100%;
@@ -98,18 +114,16 @@ header{
 }
 .header a{
     color :   rgb(26, 26, 26);
+    
 }
 .header a:hover,
 .header a:active
 {
     color : white;
-    background : rgb(26, 26, 26);
+    background : rgb(71 85 94);
     transition : .5s ease;
 }
 
-.active{
-    color : white;
-}
 
 
 
