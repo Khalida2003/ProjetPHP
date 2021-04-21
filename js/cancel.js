@@ -1,7 +1,8 @@
 const input = document.querySelector("#search_input");
-const cancelimg = document.querySelector("#resetsearch");
+const cancelimg = document.querySelector("#cancelbtn");
+const btncancel = document.querySelector("#resetsearch");
 
-cancelimg.addEventListener("click",(e)=>{
+btncancel.addEventListener("click",(e)=>{
     cancelimg.classList.add("hide");
 
 })

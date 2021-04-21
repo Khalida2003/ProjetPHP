@@ -102,30 +102,22 @@ header{
     width : 400px;
     border-radius : 4px;
     outline : none;
+    background-image: url(../imgs/searchimg.png);
+    background-size: 20px 20px;
+     background-repeat: no-repeat;
+    background-position: 2%;
    box-shadow : 1px 1px 3px rgba(138, 138, 138, 0.384);
     border : 1px solid rgba(180, 180, 180, 0.486);
     position : relative;
-
-}
-.icons{
-    width : 20px;
-    height : auto;
-    position : absolute;
-    bottom : 50%;
-    top : 50%;
-    transform : translateY(-50%);
-    z-index: 1;
-
-}
-.searchimg{
-    
-  left : 22%;
 }
 .search_cancel{
-    right : 27%;
-    cursor : pointer;
+    width : 20px;
+    height : 20px;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    transform : translate(1900%,-70%);
 }
-
 .hide{
     display: none;
 }
