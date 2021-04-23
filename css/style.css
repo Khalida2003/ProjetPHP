@@ -23,30 +23,20 @@ header{
    
 
 }
-        /* ____________________TOP NAV _____________________*/
-.firstnav{
-    width: 100%;
-    height : 10em;
-    background : rgb(71,85, 94);
-    position: relative;
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
-.firstnav img{
-    position : absolute;
-    width : 10em;
-    height : 10em;
-    left : 50%;
-    right : 50%;
-    transform : translateX(-50%);
-    animation :  infinite 10s logo linear;
+.logo a{
+    color :rgb(71,85, 94);
 }
-@keyframes logo{
-    0%{ transform : translateX(200%)}
-    50%{transform : translateX(-200%);}
-    100%{transform : translateX(200%);}
+.logo img{
+    width : 50px;
+    height : 50px;
+    margin-left : 2em;
 }
-
-
 /*  SEARCH -- LOGIN -- PANIER */
 
 .searchbar{
@@ -57,7 +47,7 @@ header{
 }
 
 .login{
-    width : 45%;
+    width : 40%;
     height : 50px;
     display : flex;
     align-items: center;
@@ -66,9 +56,9 @@ header{
     
 }
 .login ul li{
-    display: inline;
+
     display : inline-block;
-    margin : auto 1.2em;
+    margin : auto .2em;
 }
 .login a{
     margin-left : 7px;
@@ -90,13 +80,14 @@ header{
 }
 
 .form{
-    width : 55%;
+    width : 75%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position : relative;
     
 }
+
 #search_input{
     padding : .5em 3em;
     width : 400px;
@@ -122,10 +113,10 @@ header{
     display: none;
 }
 .searchbtn{
-    padding : 1em 4em;
+    padding : .5em 2.5em;
     outline : none;
     border : none;
-    border-radius : 50px;
+    border-radius : 5px;
     cursor : pointer;
     background : rgb(230, 130, 48);
     color : white;
@@ -160,6 +151,18 @@ header{
     position : relative;
     padding-bottom : 10px;
 }
+.shop_items{
+    background : rgb(112, 112, 179);
+    display: none;
+}
+.shop_items ul li{
+    display : block;
+
+}
+.shop_items ul li a{
+    border-bottom : black;
+}
+
 .secondnav ul li a:hover{
     color : rgb(26, 26, 26);
     transition : .2s ease;
@@ -645,4 +648,18 @@ footer img{
    
   
   
-  
+@media screen and  (max-width : 1245px)
+{
+.login{
+    width : 60%;
+}
+.login ul li{
+    margin : auto;
+}
+#search_input{
+    width : 300px;
+}
+.searchbtn{
+    padding : 1em 2.5em;
+}
+}
