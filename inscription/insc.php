@@ -1,4 +1,9 @@
 <?php
+   session_start();
+   if ( (isset($_SESSION['usernameClient']) && isset($_SESSION['passwordClient']) )){
+       header("location:../home.php");
+   }
+   
 $nom=$_POST['nom'];
 $prenom=$_POST['prenom'];
 $login=$_POST['login'];

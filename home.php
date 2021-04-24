@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +15,34 @@
         <title>Home Page</title>
 </head>
 <body>
-    <header >
+<header >
 
 
-        <div class="searchbar">
-            <div class="logo">
-                <img src="imgs/shop.png" alt="logo"><a href="home.html"><h1>LYK</h1></a>
-            </div>
-                <div class="form">
-            <form action="">
-            
-                <button  type="reset" id="resetsearch"><img src="imgs/cancel.png" id="cancelbtn"alt="cancel" class=" search_cancel hide"></button>
-                <input type="text" name="" id="search_input">
-                <button type="submit" class="searchbtn">Rechercher</button>
-            </form>
-                </div>
-            <div class="login">
-                <ul>
-                    <li><img src="imgs/login.png" alt="login"><a href="#">Se connecter</a></li>
-                    <li><img src="imgs/signup.png" alt="signup"><a href="#">S'inscrire</a></li>
-                    <li><img src="imgs/panier.png" alt="panier"><a href="#">Panier</a></li>
-                </ul>
-            </div>
+    <div class="searchbar">
+        <div class="logo">
+            <img src="imgs/shop.png" alt="logo"><a href="home.php"><h1>LYK</h1></a>
         </div>
-
+            <div class="form">
+        <form action="">
+        
+            <button  type="reset" id="resetsearch"><img src="imgs/cancel.png" id="cancelbtn"alt="cancel" class=" search_cancel hide"></button>
+            <input type="text" name="" id="search_input">
+            <button type="submit" class="searchbtn">Rechercher</button>
+        </form>
+            </div>
+        <div class="login">
+            <ul>
+                <?php if ( !(isset($_SESSION['usernameClient']) && isset($_SESSION['passwordClient']) )):?>
+                <li><img src="imgs/login.png" alt="login"><a href="inscription/login.php">Se connecter</a></li>
+                <li><img src="imgs/signup.png" alt="signup"><a href="inscription/insc.html">S'inscrire</a></li>
+                <?php else:?>
+                    <li><img src="imgs/clientimg.png" alt="login"><a href="#">Bienvenue Mr <?php echo $_SESSION['usernameClient']?></a></li>
+                    <li><img src="imgs/deconnexion.png" alt="logOut"><a href="inscription/logout.php">Se Deconnecter?</a></li>
+                    <?php endif; ?>
+                <li><img src="imgs/panier.png" alt="panier"><a href="#">Panier</a></li>
+            </ul>
+        </div>
+    </div>
 
         <div class="secondnav">
                 <ul>
@@ -286,41 +294,42 @@ week only</pre>
    <br><br><br>
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-              <img src="imgs/shop.png" alt="logo"><a href="home.html"><h1>LYK</h1></a>
-                </div>
-                <div class="footer-col">
-                    <h4>EXPLORE</h4>
-                    <ul>
-                        <li><a href="#"><strong>Accueil</strong></a></li>
-                        <li><a href="#"><strong>Shop</strong></a></li>
-                        <li><a href="#"><strong>About</strong></a></li>
-                        <li><a href="#"><strong>Contact</strong></a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Devenir un membre?</h4>
-                    <ul>
-                        <li><a href="#"><strong>Sign up</strong></a></li>
-                        <li><a href="#"><strong>Login</strong></a></li>
-                        <li><a href="#"><strong>Panier</strong></a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+          <img src="imgs/shop.png" alt="logo"><a href="home.php"><h1>LYK</h1></a>
+            </div>
+            <div class="footer-col">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li><a href="#"><strong>Accueil</strong></a></li>
+                    <li><a href="#"><strong>Shop</strong></a></li>
+                    <li><a href="#"><strong>About</strong></a></li>
+                    <li><a href="#"><strong>Contact</strong></a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Devenir un membre?</h4>
+                <ul>
+                    <li><a href="#"><strong>Sign up</strong></a></li>
+                    <li><a href="#"><strong>Login</strong></a></li>
+                    <li><a href="#"><strong>Panier</strong></a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-        <p class="footer_copy" >&#169; 2021 copyright all right reserved</p>
-    </footer>
+    </div>
+    <p class="footer_copy" >&#169; 2021 copyright all right reserved</p>
+</footer>
+
     <script src="js/cancel.js"></script>
 </body>
 </html>
