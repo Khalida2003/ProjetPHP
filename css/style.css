@@ -14,7 +14,9 @@ html{
     overflow-x : hidden;
 }
 
-
+body{
+    background : #fcfcfc;;
+}
 header{
     width: 100%;
     height: auto;
