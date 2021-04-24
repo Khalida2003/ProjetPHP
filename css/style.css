@@ -10,10 +10,10 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
-html{
-    overflow-x : hidden;
-}
 
+html{
+    overflow-x: hidden;
+}
 body{
     background : #fcfcfc;;
 }
@@ -42,6 +42,7 @@ header{
 /*  SEARCH -- LOGIN -- PANIER */
 
 .searchbar{
+    margin-top : 2em;
     width : 100%;
     height : 80px;
     display: flex;
@@ -237,28 +238,41 @@ header{
 
       /*collection*/
 
-      .collection_container{
-        row-gap: 20rem;
-    }
+.section99{
+    width : 100%;
+    height : 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
     .collection_box{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 95%;
+        height: 400px;
+        display : grid;
+        margin :  1em;
+        align-items: flex-start;
+        justify-content: flex-start;
         align-content: center;
         background :  rgb(71,85, 94);
         transition: .3s;
         color : #f6f6f6;
         border-radius: 4px;
         box-shadow : 0 0px 20px rgba(0, 0, 0, 0.308);
+        position : relative;
 
     }
+  
     .collection_box:hover{
         transform:translateY(-.5rem) ;
     }
-    .collection_img{
-        width: 310px;
-        height: 400px;
+    
+    .collection img{
+        width: 227px;
+        height : 400px;
+        position : absolute;
+        right : 0;
     }
+   
     .collection_title{
         padding: 0px 95px;
         font-size: 3rem;
@@ -279,28 +293,19 @@ header{
     .collection_new:hover{
         text-decoration: underline;
     }
-     
+     */
     /*--====FEATURED PRODUCTS====--*/
-    .section-title{
-        text-align: center;
-        font-size:60PX;
-        padding: 15PX;
-        margin: 15PX;
-        color : rgb(71,85, 94);
-    }
+
   section a h5{
       font-size: 20px;
       text-align: center;
       color: gray;
   }
-    .container
+    .featured_img
 {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 .container .card
@@ -311,10 +316,10 @@ header{
     margin: 20px 40px;
     display: flex;
     justify-content: center;
+    border-radius : 5px;
     align-items: center;
-    flex-direction: column;
     background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blurred-gray-background-brandon-bourdages.jpg);
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.103);
+    box-shadow: 1px 1px 10px rgba(46, 51, 73, 0.658);
 }
 .container .card .imgBx
 {
@@ -327,7 +332,6 @@ header{
     transition: 1s ease;
 
 }
-
 .container .card:hover .imgBx
 {
     transform: translateY(-100px);
@@ -354,8 +358,6 @@ header{
     color: white;
     font-weight: 600;
 }
-
-
 
 .container .card .content
 {
@@ -445,18 +447,18 @@ header{
    position: relative; 
    top: 10px;
    display: inline-block;
-   padding: 12px 30px;
-   background: rgba(216, 121, 43, 0.63);
+   padding: .5em 1em;
+   background: rgb(71,85, 94);
    border-radius: 40px;
    font-weight: 600;
    letter-spacing: 1px;
-   color: #111;
+   color: rgb(255, 255, 255);
    text-decoration: none;
    text-transform: uppercase;
    transition : .5s ease;
 }
 .container .card .content a:hover{
-    background: rgba(167, 94, 35, 0.63);
+    background: rgb(230, 130, 48);
     transition : .5s ease;
 
 }
@@ -563,6 +565,7 @@ header{
 .container{
 	max-width: 1170px;
 	margin:auto;
+    margin-bottom : 2em;
 }
 .row{
 	display: flex;
@@ -628,6 +631,11 @@ header{
 	color: #24262b;
 	background-color: #ffffff;
 }
+.footer-col img{
+    margin-top : 2em;
+    width : 150px;
+    height : 150px;
+}
 
 /*responsive*/
 @media(max-width: 767px){
@@ -641,6 +649,7 @@ header{
     width: 100%;
 }
 }
+
 .footer_copy{
     padding: 5px;
     border-top:1px solid white ;
@@ -675,4 +684,17 @@ footer img{
 .searchbtn{
     padding : 1em 2.5em;
 }
+}
+
+.big_title{
+    text-align: center;
+    font-size : 4.5em;
+    margin : 1em auto .5em auto;
+    color :rgb(71,85, 94);
+}
+.small_title{
+    text-align: center;
+    font-size : 2em;
+    margin-bottom : 1em;
+    color : rgb(111, 138, 153);
 }
