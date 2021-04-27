@@ -110,7 +110,7 @@ header{
     cursor: pointer;
     z-index: 100;
     position: absolute;
-    transform : translate(1900%,-70%);
+    transform : translate(1400%,-70%);
 }
 .hide{
     display: none;
@@ -233,6 +233,9 @@ header{
     transition : .5s ease;
 }
 
+.connecter{
+    pointer-events: none;
+}
 
 
 

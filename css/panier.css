@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color : #222;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: grid;
+}
+.pseudo-container{
+
+    width: 90%;
+    height : 270px;
+    margin : 5em auto;
+    border-bottom : 1px solid rgb(196, 196, 196);
+}
+
+
+.box{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.box > *{
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    width: 100%;
+    height : 260px;
+}
+.box span{
+    font-weight : 700;
+}
+
+.product-box{
+    grid-template-columns: 1fr;
+}
+.image-produit{
+    width : 150px;
+    height : 200px;
+    background: white;
+}
+.global-content{
+    display: flex;
+    width: 100%;
+}
+
+.image-produit img{
+    width: 100%;
+}
+.content{
+    padding-left : 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.content button{
+    border :none;
+    background: none;
+    outline: none;
+
+
+}
+
+
+.prod-header{
+    margin-bottom : 1.5em;
+}
+svg{
+    width : 20px;
+    height : 20px;
+    cursor: pointer;
+}
+svg:hover{
+    fill : red;
+}
+
+
+.price-box{
+    align-items: center;
+    justify-content: center;
+}
+.quantity-box{
+    align-items: center;
+    justify-content: center;
+}
+.total-box{
+    align-items: center;
+    justify-content: center;
+}
+
+
+    /* QUANTITY DESIGN */
+.quantity
+{   
+    padding: .5em .8em;
+    width: max-content;
+    height : auto;
+    border : 1px solid black;
+    border-radius: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+.quantity input[type="number"]{
+    padding : .3em 1em;
+    text-align: center;
+    width : 60px;
+    color : #222;
+    background: none;
+    font-weight: 700;
+    border : none;
+    outline : none;
+}
+.quantity button{
+    border : none;
+    background : none;
+    outline : none;
+}
+.quantity svg{
+    width : 15px;
+    height : 15px;
+    cursor: pointer;
+    transition : .5s;
+}
+.quantity svg:hover{
+    fill : rgb(44, 72, 124);
+}
+.total,.price{
+    color : red;
+    font-size : 14px;
+}
+.prix-header,.quantité-header,.prod-header,.total-header{
+    font-size : 1.2em;
+    font-weight : bolder;
+}
+
+/* VALIDER LA COMMANDE BUTTON */
+#valider{
+    padding: .7em 1em;
+    border-radius : 50px;
+    border : none;
+    outline : none;
+    background : #222;
+    color : white;
+    font-weight : 700;
+    transition : .5s;
+    cursor: pointer;
+}
+#valider:hover{
+    background :rgb(44, 72, 124);
+}
+.error{
+    color : red;
+}
+
+/* PANIER VIDE */
+.container2{
+    width : 80%;
+    height : 500px;
+    margin : auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding : 2em 10em;
+}
+.btn{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconcart{
+    width: 100%;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+.container2 svg{
+    width : 150px;
+    height : 250px;
+    fill :rgb(66, 66, 66);
+}
+.vide{
+    font-size : 3em;
+    font-weight: bolder;
+    text-align: center;
+}
+.subtitle{
+    text-align: center;
+    margin-bottom : 3em;
+}

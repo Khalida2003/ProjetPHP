@@ -1,35 +1,38 @@
 <?php 
     session_start();
-    if ( (isset($_SESSION['usernameClient']) && isset($_SESSION['passwordClient']) )){
-        header("location:../home.php");
+    if ( isset($_SESSION['usernameClient']) ){
+        header("location:../index.php");
     }
-      $link = mysqli_connect("localhost","root","","lyk") or die(mysqli_error($link));
+    try{
+        $link = new PDO('mysql:host=localhost;dbname=lyk;charset=utf8', 'root', '',array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-      $username = $password = "";
+    }
+        catch(Exception $e)  {die('Erreur : '.$e->getMessage());}
+
         $error = "";
     if(isset($_POST["submit"]))
     {
         $username = $_POST["usernameClient"];
         $password = $_POST["passwordClient"];
    
-    $sql1 =  "SELECT usernameClient,passwordClient FROM client
-            WHERE usernameClient = '$username'
-            AND passwordClient = '$password' ";
-    $result1 = mysqli_query($link,$sql1) or die(mysqli_error($link));
-    $row = mysqli_fetch_all($result1,MYSQLI_ASSOC);
-    if($row)
+
+
+    $verification = $link -> prepare('SELECT usernameClient,passwordClient FROM client WHERE usernameClient=? AND passwordClient=?');
+    $verification -> execute(array($username,$password));
+    if($verification->fetch())
     {
-        # connexion reussi
+              # connexion reussi
         $_SESSION["usernameClient"] = $username;
-        $_SESSION["passwordClient"] = $password;
-        header("location:../home.php");
+        header("location:../index.php");
     }
-    else {
-        #connexion non reussi
-        $error = "Login ou mot de passe incorrect . Veuiller réssayer à nouveau";
-    }
+else{
+   #connexion non reussi
+   $error = "Login ou mot de passe incorrect . Veuiller réssayer à nouveau";
 }
-    mysqli_close($link);
+
+  
+}
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +48,7 @@
 <header >
 <div class="searchbar">
     <div class="logo">
-        <img src="../imgs/shop.png" alt="logo"><a href="../home.php"><h1>LYK</h1></a>
+        <img src="../imgs/shop.png" alt="logo"><a href="../index.php"><h1>LYK</h1></a>
     </div>
         <div class="form">
     <form action="">
@@ -70,10 +73,9 @@
                         <h1>Login</h1>
                         <div class="inputs">
                       
-                        <input required autocomplete="off" type="text" name="usernameClient" id="usernameClient" placeholder="Entrer votre login" value="<?php $username ?>">
-                        <input required autocomplete="off" type="password" name="passwordClient" id="passwordClient" placeholder="Entrer votre mot de passe" value="<?php $password?>">
-
-                        <button type="submit"class="submit" name="submit">Login</button>
+                        <input required autocomplete="off" type="text" name="usernameClient" id="usernameClient" placeholder="Entrer votre login" >
+                        <input required autocomplete="off" type="password" name="passwordClient" id="passwordClient" placeholder="Entrer votre mot de passe" >
+                      <button type="submit"class="submit" name="submit">Login</button>
                         </div>
                         <div class="pasdecompte"><a href="insc.html">Pas de compte toujours?</a></div>
                     </form>
@@ -89,7 +91,7 @@
     <div class="container">
         <div class="row">
             <div class="footer-col">
-          <img src="../imgs/shop.png" alt="logo"><a href="../home.php"><h1>LYK</h1></a>
+          <img src="../imgs/shop.png" alt="logo"><a href="../index.php"><h1>LYK</h1></a>
             </div>
             <div class="footer-col">
                 <h4>EXPLORE</h4>

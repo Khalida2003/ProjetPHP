@@ -1,7 +1,7 @@
 <?php
    session_start();
    if ( (isset($_SESSION['usernameClient']) && isset($_SESSION['passwordClient']) )){
-       header("location:../home.php");
+       header("location:../index.php");
    }
    
 $nom=$_POST['nom'];
@@ -21,7 +21,7 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-$userReq = $bdd -> prepare('INSERT INTO user(nom_user, prenom ,login,password)
+$userReq = $bdd -> prepare('INSERT INTO client(nom_user, prenom ,login,password)
                             VALUES (:nom_user , :prenom ,:login,:password)');
 $userReq -> execute(array(
     'nom_user' => $nom,

@@ -1,5 +1,6 @@
 <?php 
-    session_start();
+   session_start();
+   
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-        <title>Home Page</title>
+        <title>Accueil - LYK</title>
 </head>
 <body>
 <header >
@@ -20,26 +21,26 @@
 
     <div class="searchbar">
         <div class="logo">
-            <img src="imgs/shop.png" alt="logo"><a href="home.php"><h1>LYK</h1></a>
+            <img src="imgs/shop.png" alt="logo"><a href="index.php"><h1>LYK</h1></a>
         </div>
             <div class="form">
         <form action="">
         
             <button  type="reset" id="resetsearch"><img src="imgs/cancel.png" id="cancelbtn"alt="cancel" class=" search_cancel hide"></button>
-            <input type="text" name="" id="search_input">
+            <input type="text" name="" id="search_input" required autocomplete="off">
             <button type="submit" class="searchbtn">Rechercher</button>
         </form>
             </div>
         <div class="login">
             <ul>
-                <?php if ( !(isset($_SESSION['usernameClient']) && isset($_SESSION['passwordClient']) )):?>
+                <?php if ( !(isset($_SESSION['usernameClient']) ) ):?>
                 <li><img src="imgs/login.png" alt="login"><a href="inscription/login.php">Se connecter</a></li>
                 <li><img src="imgs/signup.png" alt="signup"><a href="inscription/insc.html">S'inscrire</a></li>
                 <?php else:?>
-                    <li><img src="imgs/clientimg.png" alt="login"><a href="#">Bienvenue Mr <?php echo $_SESSION['usernameClient']?></a></li>
+                    <li><img src="imgs/clientimg.png" alt="login"><a class="connecter" href="#">Bienvenue <?php echo $_SESSION['usernameClient']?></a></li>
                     <li><img src="imgs/deconnexion.png" alt="logOut"><a href="inscription/logout.php">Se Deconnecter?</a></li>
                     <?php endif; ?>
-                <li><img src="imgs/panier.png" alt="panier"><a href="#">Panier</a></li>
+                <li><img src="imgs/panier.png" alt="panier"><a href="panier.php">Panier</a></li>
             </ul>
         </div>
     </div>
@@ -47,12 +48,12 @@
         <div class="secondnav">
                 <ul>
                     <li ><a class="active" href="#">Accueil</a></li>
-                    <li><a href="#">Shop</a>
+                    <li><a href="boutique.php">Boutique</a>
                         <ul>
-                            <li><a href="#">Homme</a></li>
-                            <li><a href="#">Femme</a></li>
-                            <li><a href="#">Enfant</a></li>
-                            <li><a href="#">Nourriture</a></li>
+                            <li><a href="homme.php">Homme</a></li>
+                            <li><a href="femme.php">Femme</a></li>
+                            <li><a href="enfant.php">Enfant</a></li>
+                            <li><a href="nutrition.php">Nutrition</a></li>
                             <li><a href="#">Accessoires</a></li>
                             
                         </ul>
@@ -297,7 +298,7 @@ week only</pre>
     <div class="container">
         <div class="row">
             <div class="footer-col">
-          <img src="imgs/shop.png" alt="logo"><a href="home.php"><h1>LYK</h1></a>
+          <img src="imgs/shop.png" alt="logo"><a href="index.php"><h1>LYK</h1></a>
             </div>
             <div class="footer-col">
                 <h4>EXPLORE</h4>

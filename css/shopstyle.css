@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background : #eee;
+}
+.container{
+    width : 100%;
+    height : 1000px;
+    display : grid;
+    justify-content: center;
+    background: #fff;
+    
+    
+}
+.pseudo-container{
+    width : 80%;
+    margin : 3em auto;
+    height : 600px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.img-section{
+    margin-top : 1.5em;
+    height : 550px;
+    width : 100%;
+    overflow: hidden;
+    border: 1px solid #e4e4e4;
+    cursor: pointer;
+
+}
+.info-section{
+    width : 100%;
+    padding : 1em 2em;
+    font-weight : 700;
+
+}
+
+.title {
+    font-size : 1.6em;
+}
+.price{
+    color : red;
+}
+.img-section img{
+    width : 100%;
+    height : 550px;
+    transition : 1s;
+
+}
+.img-section img:hover{
+    transform : scale(1.2);
+}
+.quantity
+{   
+    padding: .5em .8em;
+    width: max-content;
+    height : auto;
+    border : 1px solid black;
+    border-radius: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+.quantity input[type="number"]{
+    padding : .3em 1em;
+    text-align: center;
+    width : 60px;
+    color : #222;
+    background: none;
+    font-weight: 700;
+    border : none;
+    outline : none;
+}
+.quantity button{
+    border : none;
+    background : none;
+    outline : none;
+}
+.quantity svg{
+    width : 15px;
+    height : 15px;
+    cursor: pointer;
+    transition : .5s;
+}
+.quantity svg:hover{
+    fill : rgb(44, 72, 124);
+}
+#add{
+    padding: .89em 3.2em;
+    border-radius : 50px;
+    margin-left : 2em;
+    border : none;
+    outline : none;
+    background : #222;
+  
+    color : white;
+    font-weight : 700;
+    transition : .5s;
+    cursor: pointer;
+}
+#add:hover{
+    background :rgb(44, 72, 124);
+}
+.addproduct{
+    width : 100%;
+    height : auto;
+    display : flex;
+    padding-top : 2em;
+    margin-bottom : 2em;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.details{
+    width: 100%;
+    display:grid;
+    row-gap: 1em;
+    padding : 1em;
+}
+.det{
+    font-size : 14px;
+    color : rgb(58, 58, 58);
+}
+.icons{
+    width : 100%;
+    height : auto;
+    display : flex;
+    justify-content: center;
+}
+.icons svg{
+    width : 30px;
+    height : 30px;
+    margin : 1em;
+    transition: .5s;
+}
+.icons svg:hover{
+    fill :rgb(24, 63, 134);
+}
