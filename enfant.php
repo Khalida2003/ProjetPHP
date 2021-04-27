@@ -31,7 +31,7 @@ session_start();
                 <li><a href="homme.php">Homme</a></li>
                 <li><a href="femme.php" >Femme</a></li>
                 <li><a href=""class="active">Enfant</a></li>
-                <li><a href="">Accessoires</a></li>
+                <li><a href="accessoire.php"">Accessoires</a></li>
                 <li><a href="nutrition.php">Nutrition</a></li>
             </ul>
         </div>

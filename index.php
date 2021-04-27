@@ -54,7 +54,7 @@
                             <li><a href="femme.php">Femme</a></li>
                             <li><a href="enfant.php">Enfant</a></li>
                             <li><a href="nutrition.php">Nutrition</a></li>
-                            <li><a href="#">Accessoires</a></li>
+                            <li><a href="accessoire.php"">Accessoires</a></li>
                             
                         </ul>
                     <li><a href="#">About</a></li>

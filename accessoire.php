@@ -19,7 +19,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/productstyle.css">
-    <title>Nutrition - Collections</title>
+    <title>Accessoires fitness - Collections</title>
 </head>
 <body>
 <div class="imgnav">
@@ -31,8 +31,8 @@ session_start();
                 <li><a href="homme.php">Homme</a></li>
                 <li><a href="femme.php" >Femme</a></li>
                 <li><a href="enfant.php">Enfant</a></li>
-                <li><a href="accessoire.php"">Accessoires</a></li>
-                <li><a href=""class="active">Nutrition</a></li>
+                <li><a href=""class="active">Accessoires</a></li>
+                <li><a href="nutrition.php">Nutrition</a></li>
             </ul>
         </div>
         <div class="imgnav">
@@ -40,10 +40,10 @@ session_start();
         </div>
             <div class="container">
             <?php foreach($produits as $produit): ?>
-            <?php if($produit["genreProduit"]=="nutrition"): ?>
+            <?php if($produit["genreProduit"]=="accessoire"): ?>
             <div class="box">
                             <div class="product_img">
-                            <img src="imgnutrition/<?php echo $produit["imageProduit"]?>" alt="imgnutrition">
+                            <img src="imgaccessoire/<?php echo $produit["imageProduit"]?>" alt="imgenfant">
                                 <div class="img-content">
                                 <form action="shop.php" method="POST">
                                 <input type="hidden" name="numProduit" value="<?php echo $produit["numProduit"] ?>">
