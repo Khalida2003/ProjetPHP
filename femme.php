@@ -43,7 +43,7 @@ session_start();
             <?php if($produit["genreProduit"]=="femme"): ?>
             <div class="box">
                             <div class="product_img">
-                            <img src="imgfemme/<?php echo $produit["imageProduit"]?>" alt="imgfemme">
+                            <img src="images/<?php echo $produit["imageProduit"]?>" alt="imgfemme">
                                 <div class="img-content">
                                 <form action="shop.php" method="POST">
                                 <input type="hidden" name="numProduit" value="<?php echo $produit["numProduit"] ?>">

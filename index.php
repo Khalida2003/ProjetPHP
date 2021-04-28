@@ -1,7 +1,5 @@
-<?php 
-   session_start();
-   
-?>
+
+  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +22,11 @@
             <img src="imgs/shop.png" alt="logo"><a href="index.php"><h1>LYK</h1></a>
         </div>
             <div class="form">
-        <form action="">
+        <form action="search.php" METHOD="POST">
         
             <button  type="reset" id="resetsearch"><img src="imgs/cancel.png" id="cancelbtn"alt="cancel" class=" search_cancel hide"></button>
-            <input type="text" name="" id="search_input" required autocomplete="off">
-            <button type="submit" class="searchbtn">Rechercher</button>
+            <input type="text" name="search" id="search_input" required autocomplete="off">
+            <input type="submit" name="recherche" value="search" class="searchbtn">
         </form>
             </div>
         <div class="login">
@@ -332,5 +330,6 @@ week only</pre>
 </footer>
 
     <script src="js/cancel.js"></script>
+
 </body>
 </html>

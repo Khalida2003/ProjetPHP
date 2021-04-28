@@ -31,7 +31,7 @@ session_start();
                 <li><a href=""class="active">Homme</a></li>
                 <li><a href="femme.php" >Femme</a></li>
                 <li><a href="enfant.php">Enfant</a></li>
-                <li><a href="accessoire.php"">Accessoires</a></li>
+                <li><a href="accessoire.php">Accessoires</a></li>
                 <li><a href="nutrition.php">Nutrition</a></li>
             </ul>
         </div>
@@ -43,7 +43,7 @@ session_start();
             <?php if($produit["genreProduit"]=="homme"): ?>
             <div class="box">
                             <div class="product_img">
-                            <img src="imghomme/<?php echo $produit["imageProduit"]?>" alt="imghomme">
+                            <img src="images/<?php echo $produit["imageProduit"]?>" alt="imghomme">
                                 <div class="img-content">
                                 <form action="shop.php" method="POST">
                                 <input type="hidden" name="numProduit" value="<?php echo $produit["numProduit"] ?>">
