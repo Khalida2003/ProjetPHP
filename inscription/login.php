@@ -3,11 +3,7 @@
     if ( isset($_SESSION['usernameClient']) ){
         header("location:../index.php");
     }
-    try{
-        $link = new PDO('mysql:host=localhost;dbname=lyk;charset=utf8', 'root', '',array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-    }
-        catch(Exception $e)  {die('Erreur : '.$e->getMessage());}
+    $link = mysqli_connect("localhost","root","","lyk") or die(mysqli_connect_error());
 
         $error = "";
     if(isset($_POST["submit"]))
@@ -16,19 +12,27 @@
         $password = $_POST["passwordClient"];
    
 
+     $verification = "SELECT *FROM client WHERE usernameClient='$username' AND passwordClient = '$password'";
+     $result = mysqli_query($link,$verification) or die(mysqli_error($link));   
+    $client = mysqli_fetch_assoc($result);
 
-    $verification = $link -> prepare('SELECT usernameClient,passwordClient FROM client WHERE usernameClient=? AND passwordClient=?');
-    $verification -> execute(array($username,$password));
-    if($verification->fetch())
+    if(mysqli_num_rows($result))
     {
               # connexion reussi
+              if($client["etat"] == "banni"):
+              $error = "Vous êtes banni , vous ne pouvez plus acceder au site"; 
+              else:
         $_SESSION["usernameClient"] = $username;
+        if($client["typeClient"] == "user")
         header("location:../index.php");
+        else
+        header("location:../Admin/index.php");
+              endif;
     }
 else{
    #connexion non reussi
-   $error = "Login ou mot de passe incorrect . Veuiller réssayer à nouveau";
-}
+   $error = "Login ou mot de passe incorrect . Veuiller réssayer à nouveau"; 
+} 
 
   
 }

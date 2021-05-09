@@ -123,7 +123,7 @@
                         <span class="prod-header">Produit</span>
                         <div class="global-content">
                                 <div class="image-produit">
-        <img src="img<?php echo $produit['genreProduit'] ?>/<?php echo $produit['imageProduit'] ?>" alt="img" class="image">
+                                <img src="images/<?php echo $produit['imageProduit'] ?>" alt="img" class="image">
                                 </div>
                                 <div class="content">
                                         <span><?php echo $produit['nomProduit'] ?></span>

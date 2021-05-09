@@ -41,7 +41,7 @@
                         </div>
                     <div class="first">
                         <div class="img-section">
- <div class="img flex"><img src="img<?php echo $produit['genreProduit'] ?>/<?php echo $produit['imageProduit'] ?>" alt="img"></div>
+ <div class="img flex"><img src="images/<?php echo $produit['imageProduit'] ?>" alt="img" class="image"></div>
                             <span><?php echo $produit['nomProduit']?></span>
                         </div>
                         <div class="price-section flex">

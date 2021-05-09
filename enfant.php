@@ -2,7 +2,7 @@
 session_start();
         $link = mysqli_connect("localhost","root","","lyk") or die(mysqli_connect_error());
 
-        $sql = "SELECT * FROM produit";
+        $sql = "SELECT * FROM produit ";
         $result = mysqli_query($link,$sql) or die(mysqli_errno($link));
 
         $produits = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -10,7 +10,6 @@ session_start();
         mysqli_free_result($result);
         mysqli_close($link);
 ?>
-        
 
 <!DOCTYPE html>
 <html lang="en">

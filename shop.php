@@ -28,7 +28,7 @@
     <div class="container">
             <div class="pseudo-container">
                 <div class="img-section">
-                    <img src="img<?php echo $produit['genreProduit'] ?>/<?php echo $produit['imageProduit'] ?>" alt="img" class="image">
+                    <img src="images/<?php echo $produit['imageProduit'] ?>" alt="img" class="image">
                 </div>
                 <div class="info-section">
                     <span class="title"><?php echo $produit["nomProduit"] ?></span><br>

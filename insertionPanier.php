@@ -2,7 +2,7 @@
  session_start();
  if (!isset($_SESSION['usernameClient']) )
  {
-         echo " veuiller vous connecter ou s'inscrire";
+         header("location:inscription/login.php");
          die();
  }
                 $link = mysqli_connect("localhost","root","","lyk") or die(mysqli_connect_error());
